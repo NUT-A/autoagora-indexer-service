@@ -16,8 +16,12 @@ jobs:
   #   uses: ./.github/workflows/docker_build.yml
   #   with:
   #     indexer-version: ${{ matrix.indexer-version }}
+  
+  test:
+    runs-on: ubuntu-latest
 
-  docker-test:
-    uses: ./.github/workflows/test_actions.yml
-    with:
-      indexer-version: v0.20.11
+    steps:
+      - name: Python Semantic Release
+        uses: ./.github/workflows/test_actions.yml
+        with:
+          indexer-version: v0.20.11
