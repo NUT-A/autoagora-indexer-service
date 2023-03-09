@@ -33,7 +33,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Print all outputs release
-        run: echo ${{ toJSON(steps.release.outputs) }}
+        run: echo ${{ steps.release.outputs.* }}
 
       - uses: actions/checkout@v3
       
