@@ -26,7 +26,8 @@ jobs:
 
       - name: Python Semantic Release
         id: release
-        uses: tumaysem/python-semantic-release@master
+        # uses: tumaysem/python-semantic-release@master
+        uses: nut-a/python-semantic-release@publish_gh_outputs
         with:
           additional_options: --github
           github_token: ${{ secrets.GITHUB_TOKEN }}
