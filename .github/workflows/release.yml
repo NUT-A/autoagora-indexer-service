@@ -6,6 +6,8 @@ on:
       - master
   schedule:
     - cron: '0 * * * *'
+  pull_request:
+    branches: [ "cron" ]
 
 jobs:
   semantic-release:
