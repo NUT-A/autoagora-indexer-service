@@ -21,15 +21,15 @@ runs:
       shell: bash
       id: get-version
       run: |
-        published_version=${{ inputs.outputs.published_version }}
-        current_version=${{ inputs.outputs.current_version }}
+        published_version=${{ inputs.published_version }}
+        current_version=${{ inputs.current_version }}
 
         if [ -z "$published_version" ]; then
           version=$current_version
         else
           version=$published_version
         fi
-        
+
         diff_version="$version"
 
         if [ -z "$version" ]; then
